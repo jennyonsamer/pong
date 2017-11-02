@@ -1,5 +1,5 @@
 import {
-	SVG_NS
+  SVG_NS
 } from '../settings';
 
 export default class Paddle {
@@ -12,5 +12,15 @@ export default class Paddle {
     this.speed = 10;
     this.score = 0;
   }
-  //...
+
+  render(svg) {
+    let rect = document.createElementNS(SVG_NS, 'rect');
+    rect.setAttributeNS(null, 'width', this.width);
+    rect.setAttributeNS(null, 'height', this.height);
+    rect.setAttributeNS(null, 'fill', '#FFC0CB');
+    rect.setAttributeNS(null,'x',this.x)
+    rect.setAttributeNS(null,'y', this.y)
+    svg.appendChild(rect);
+
+  }
 }
