@@ -9,6 +9,7 @@ export default class Ball {
     this.boardHeight = boardHeight;
     this.direction = 1;
     this.ping = new Audio('public/sounds/pong-01.wav');
+    this.point = new Audio ('public/sounds/score.wav');
 
     this.reset();
   }
@@ -100,6 +101,7 @@ export default class Ball {
 
   goal(paddle) {
     paddle.score++;
+    this.point.play();
     this.reset();
   }
 
