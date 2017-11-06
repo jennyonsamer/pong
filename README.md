@@ -1,6 +1,9 @@
 # Pong Game
 
-A basic pong game using SVGs.
+A basic pong game using SVGs. 
+
+Stretch Goals: adding Winner at the end of the game.
+
 
 ## Setup
 
